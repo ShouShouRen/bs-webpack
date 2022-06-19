@@ -1,1 +1,0 @@
-{"version":3,"file":"index.e12f3b8b5f283c4c6a28.css","mappings":"AAAA;IACI,sDAAsD;IACtD,YAAY;IACZ,aAAa;AACjB,C","sources":["webpack://bootstrap-5/./src/index.css"],"sourcesContent":[".root{\r\n    background-image: url(https://picsum.photos/id/21/200);\r\n    width: 100px;\r\n    height: 150vh;\r\n}"],"names":[],"sourceRoot":""}

@@ -8,11 +8,21 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "index.[hash].js",
   },
+  // loader
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        use: [MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            }
+          },
+          {
+            loader: 'postcss-loader'
+          }
+        ],
       },
       {
         test: /\.(gif|png)/,
