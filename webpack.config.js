@@ -2,9 +2,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require("path");
+const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
+  // input
   entry: "./src/index.js",
   mode: "production",
+  // output
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "index.[hash].js",
@@ -38,6 +41,7 @@ module.exports = {
       }
     ],
   },
+  // plugin
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
@@ -45,6 +49,11 @@ module.exports = {
       filename: 'index.[hash].css'
     }),
     new CleanWebpackPlugin(),
+    new CopyPlugin({
+      patterns:[
+        { from: "./static", to: "./static" },
+      ],
+    }),
   ],
   devtool: 'source-map'
 };
