@@ -1,9 +1,8 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const {
-  CleanWebpackPlugin
-} = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
 const webpack = require('webpack');
 const path = require("path");
 module.exports = {
@@ -61,7 +60,8 @@ module.exports = {
     new webpack.DefinePlugin({
       // Definitions....
       PRODUCTION: JSON.stringify(false),
-    })
+    }),
+    new CompressionPlugin()
   ],
   devtool: 'source-map'
 };
