@@ -7,7 +7,8 @@ import {
 // console.log($.ajax);
 
 // TODO del
-console.log(a);
+console.log(a,'...');
+
 class Test {
     #a = 100
 }
