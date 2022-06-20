@@ -1,0 +1,17 @@
+$primary-color: #3e3e3e;
+$secondary-color: #fff;
+
+body {
+    background-color: $primary-color;
+}
+
+.title {
+    color: $secondary-color;
+}
+
+.box{
+    .title{
+        font-size: 64px;
+        color: blue;
+    }
+}
