@@ -1,0 +1,21 @@
+// sass map
+
+@use "sass:map";
+
+// $font-weights: ("regular": 400, "medium": 500, "bold": 700);
+
+$font-weights: ();
+
+// $font-weights: map.set($font-weights, "extra-bold", 900);
+
+$light-weights: ("lightest": 100, "light": 300);
+
+$heavt-weights: ("medium": 500, "bold": 700);
+
+$font-weights: map.merge($light-weights, $heavt-weights);
+
+.title{
+    font-weight: map.get($font-weights, "medium");
+}
+
+// $text: ("large": 64px, "small" : 16px);
