@@ -5,12 +5,24 @@
     height: $size;
     background-color: $color;
     margin-bottom: 10px;
+
+    @if $size >100px {
+        border-radius: 99px;
+    }
 }
 
-// function
+// function if
 
 @function getMarginLeft($size) {
-    @return $size / 2;
+    @if $size < 100px {
+        @return 30px;
+    }
+
+    @else {
+        @return 50px;
+    }
+
+    // @return $size / 2;
 }
 
 .box {

@@ -1,0 +1,20 @@
+// sass extend
+
+.common-font-color {
+    color: lightblue;
+}
+
+.title {
+    @extend .common-font-color;
+    font-size: 24px;
+}
+
+.desc {
+    @extend .common-font-color;
+    font-size: 16px;
+}
+
+.desc2 {
+    @extend .common-font-color;
+    font-size: 14px;
+}
