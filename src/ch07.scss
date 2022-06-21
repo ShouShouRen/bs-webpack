@@ -8,7 +8,50 @@ $sizes: 10px, 20px, 30px;
     }
 }
 
+$color-map: ("red": rgb(230,129,99), "green": rgb(146,211,157));
 
+@each $key, $value in $color-map {
+    .icon-#{key}{
+        color: $value;
+    }
+}
+
+// for 
+
+@media screen and (min-width: 300px){
+    $x: 15;
+    $s: 0;
+    @for $i from $s through $x {
+        .grid-#{$i}{
+            width: calc(100% / 12 * #{$i});
+        }
+    }
+}
+@media screen and (min-width: 768px){
+    @for $i from 1 through 12 {
+        .grid-m-#{$i}{
+            width: calc(100% / 12 * #{$i});
+        }
+    }
+}
+@media screen and (min-width: 1200px){
+    @for $i from 1 through 12 {
+        .grid-l-#{$i}{
+            width: calc(100% / 12 * #{$i});
+        }
+    }
+}
+
+// while
+
+$fontSize: 16px;
+
+@while $fontSize < 20px {
+    .text-#{$fontSize}{
+        font-size: $fontSize;
+    }
+    $fontSize: $fontSize + 1;
+}
 
 // .text-10{
 //     font-size: 10px;
