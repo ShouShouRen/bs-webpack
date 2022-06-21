@@ -1,0 +1,8 @@
+// sass 模組化
+
+@use 'base';
+
+.title{
+    color: base.$primary;
+    @include base.text-size();
+}
