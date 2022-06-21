@@ -7,14 +7,23 @@
     margin-bottom: 10px;
 }
 
+// function
+
+@function getMarginLeft($size) {
+    @return $size / 2;
+}
+
 .box {
     @include square(50px, red);
+    margin-left: getMarginLeft(50px);
 }
 
 .box1 {
     @include square(100px, orange);
+    margin-left: getMarginLeft(100px);
 }
 
 .box2 {
-    @include square(150px , green);
+    @include square(150px, green);
+    margin-left: getMarginLeft(200px);
 }
